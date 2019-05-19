@@ -10,6 +10,7 @@ export default class HomePage extends Component {
         <br />
         <Timer />
         <button onClick={this.props.props.startGame}>Generate Color</button>
+
         <Game props={this.props.props.state.codes} />
       </div>
     );

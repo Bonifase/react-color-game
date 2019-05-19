@@ -3,15 +3,15 @@ import React from "react";
 export default function Game(props) {
   let codes = props.props;
   return (
-    <div>
+    <div className="some-page-wrapper">
       {codes.map((code, index) => {
         return (
-          <div className="some-page-wrapper">
+          <div>
             <div className="rows">
               <div className="column">
                 <div className="card" key={index} style={{ backgroundColor: `${code}` }}>
                   <div className="card-content">
-                    <h6>{code}</h6>
+                    <p>{code}</p>
                   </div>
                 </div>
               </div>

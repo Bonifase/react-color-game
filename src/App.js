@@ -13,7 +13,7 @@ export default class App extends Component {
   startGame = e => {
     e.preventDefault();
     this.setState({ start: true });
-    var count = 20;
+    var count = 21;
     let colors = [];
     for (var i = 0; i < count; i++) {
       let x =
