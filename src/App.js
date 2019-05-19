@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import HomePage from "./components/HomePage";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  state = {
+    start: false,
+    score: 0,
+    stopGame: this.stopGame
+  };
+
+  startGame = e => {
+    e.preventDefault();
+    this.setState({ start: true });
+    // console.log(this.state);
+  };
+  stopGame = e => {
+    e.preventDefault();
+    this.setState({ start: false });
+    console.log(this.state);
+  };
+  render() {
+    return (
+      <div>
+        {this.state.start === true ? (
+          <HomePage stopGame={this.stopGame} />
+        ) : (
+          <button onClick={this.startGame}>Start Game</button>
+        )}
+      </div>
+    );
+  }
 }
-
-export default App;
