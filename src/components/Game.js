@@ -7,7 +7,15 @@ export default function Game(props) {
       {codes.map((code, index) => {
         return (
           <div>
-            <li key={index}>{code}</li>
+            <div className="row">
+              <div className="col s12 m7">
+                <div className="card" key={index} style={{ backgroundColor: `${code}` }}>
+                  <div className="card-content">
+                    <p>{code}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         );
       })}

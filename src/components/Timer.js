@@ -56,7 +56,7 @@ class Timer extends React.Component {
     let reset = this.state.time === 0 || this.state.isOn ? null : <button onClick={this.resetTimer}>reset</button>;
     return (
       <div>
-        <h3>Elapsed Time: {ms(this.state.time)}</h3>
+        <h4>Elapsed Time: {ms(this.state.time)}</h4>
         {start}
         {resume}
         {stop}

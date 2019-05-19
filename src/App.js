@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import HomePage from "./components/HomePage";
+import "./App.css";
 
 export default class App extends Component {
   state = {
@@ -12,10 +13,14 @@ export default class App extends Component {
   startGame = e => {
     e.preventDefault();
     this.setState({ start: true });
-    var count = 10;
+    var count = 20;
     let colors = [];
     for (var i = 0; i < count; i++) {
-      let x = Math.floor(Math.random() * 10 + 1);
+      let x =
+        "#" +
+        Math.random()
+          .toString(16)
+          .slice(2, 8);
       colors.push(x);
     }
     this.setState({ codes: colors });
@@ -27,7 +32,9 @@ export default class App extends Component {
   };
   render() {
     return (
-      <div>{this.state.start === true ? <HomePage props={this} /> : <button onClick={this.startGame}>Start Game</button>}</div>
+      <div className="App-header">
+        {this.state.start === true ? <HomePage props={this} /> : <button onClick={this.startGame}>Start Game</button>}
+      </div>
     );
   }
 }
