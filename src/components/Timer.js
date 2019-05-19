@@ -50,10 +50,30 @@ class Timer extends React.Component {
     this.setState({ time: 0, isOn: false });
   }
   render() {
-    let start = this.state.time === 0 ? <button onClick={this.startTimer}>start</button> : null;
-    let stop = this.state.time === 0 || !this.state.isOn ? null : <button onClick={this.stopTimer}>stop</button>;
-    let resume = this.state.time === 0 || this.state.isOn ? null : <button onClick={this.startTimer}>resume</button>;
-    let reset = this.state.time === 0 || this.state.isOn ? null : <button onClick={this.resetTimer}>reset</button>;
+    let start =
+      this.state.time === 0 ? (
+        <button onClick={this.startTimer} className="customButton">
+          start
+        </button>
+      ) : null;
+    let stop =
+      this.state.time === 0 || !this.state.isOn ? null : (
+        <button onClick={this.stopTimer} className="customButton">
+          stop
+        </button>
+      );
+    let resume =
+      this.state.time === 0 || this.state.isOn ? null : (
+        <button onClick={this.startTimer} className="customButton">
+          resume
+        </button>
+      );
+    let reset =
+      this.state.time === 0 || this.state.isOn ? null : (
+        <button onClick={this.resetTimer} className="customButton">
+          reset
+        </button>
+      );
     return (
       <div>
         <h4>Elapsed Time: {ms(this.state.time)}</h4>

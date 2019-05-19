@@ -33,7 +33,13 @@ export default class App extends Component {
   render() {
     return (
       <div className="App-header">
-        {this.state.start === true ? <HomePage props={this} /> : <button onClick={this.startGame}>Start Game</button>}
+        {this.state.start === true ? (
+          <HomePage props={this} />
+        ) : (
+          <button onClick={this.startGame} className="customButton">
+            Start Game
+          </button>
+        )}
       </div>
     );
   }

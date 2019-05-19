@@ -28,3 +28,27 @@ body {
 h6 {
   color: #e9eff1;
 }
+.customButton {
+  -moz-box-shadow: 0px 10px 14px -7px #0b2c87;
+  -webkit-box-shadow: 0px 10px 14px -7px #0b2c87;
+  box-shadow: 0px 10px 14px -7px #0b2c87;
+  background-color: #111b2b;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 6px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 12px;
+  padding: 6px 22px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #1c50d6;
+}
+.customButton:hover {
+  background-color: #295e9e;
+}
+.customButton:active {
+  position: relative;
+  top: 1px;
+}
