@@ -6,12 +6,12 @@ export default function Game(props) {
     <div>
       {codes.map((code, index) => {
         return (
-          <div>
-            <div className="row">
-              <div className="col s12 m7">
+          <div className="some-page-wrapper">
+            <div className="rows">
+              <div className="column">
                 <div className="card" key={index} style={{ backgroundColor: `${code}` }}>
                   <div className="card-content">
-                    <p>{code}</p>
+                    <h6>{code}</h6>
                   </div>
                 </div>
               </div>
